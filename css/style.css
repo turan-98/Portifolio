@@ -11,15 +11,17 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
 }
 .full-size {
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 .container-home {
   height: 100vh;
   width: 100%;
+  position: relative;
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +33,6 @@
   display: -ms-flex;
   display: flex;
   justify-content: center;
-  align-items:center;
   padding: 8px;
 }
 .menu ul {
@@ -48,14 +49,11 @@
   color: white;
   margin: 8px;
   text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 400;
 }
-body {
-  --fonte-primaria: 'Playfair Display', serif;
-  --fonte-secondaria: 'Roboto', sans-serif;
-}
-
-#ballon{
-  animation:ballon 4s ease-in-out infinite alternate;
+#ballon {
+  animation: ballon 4s ease-in-out infinite alternate;
 }
 #girl {
   animation: girl 4s ease-in-out infinite alternate;
@@ -64,15 +62,19 @@ body {
   from {
     transform: rotateX(0deg);
   }
-  to{
+  to {
     transform: rotateX(20deg);
   }
 }
-@keyframes girl{
+@keyframes girl {
   from {
     transform: rotateX(0deg);
   }
-  to{
+  to {
     transform: rotateX(20deg);
   }
+}
+body {
+  --fonte-primaria: 'Playfair Display', serif;
+  --fonte-secondaria: 'Roboto', sans-serif;
 }
